@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>MovieFind</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="jumbotron jumbotron-fluid text-center bg-dark text-light">
+            <h2>MovieFind</h2>
+        </div>
+
+        <div class="container-fluid text-center">
+            <h3>Search a movie</h3>
+            <input class="m-2" id="moviesearch" type="text" placeholder="Type movie here">
+            <!-- <form action="movieresult.html"> -->
+            <br><button class="btn btn-dark btn-sm" type="submit" onclick="submitMovie()">SEARCH</button>
+            <!-- </form> -->
+        </div>
+        
+        
+        <div class="container-fluid p-5 justify-content-start">
+            <h3 class="text-center">Choose a genre:</h3>
+            <div class="genres" id="checkbox-grid">
+
+            </div>
+            <div class="text-center">
+                <button type="Submit" class="btn btn-dark" onclick="submitRecs()">Recommend me!</button>
+            </div>
+        </div>
+ 
+        
+        <div class="container-fluid">
+            <div class="searchresults" id="searchresults">
+            
+            </div>
+        </div>
+
+        <div class="toprated">
+            <h1 id="topratedtext">Top Rated</h1>
+            
+        </div>
+
+        <div class="trending">
+            <h1 id="trendingtext">Trending this week</h1>
+        </div>
+
+    
+
+
+    
+
+        
+        
+        <script src="app.js"></script>
+
+
+         <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+    </body>
+</html>

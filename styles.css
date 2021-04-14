@@ -1,0 +1,48 @@
+#checkbox-grid {
+    columns: 4 8em;
+    vertical-align: middle;
+  }
+
+#checkbox-space{
+    margin-right: 10px;
+
+}
+
+#searchtext{
+    padding: 10px;
+    margin: 20px;
+    border: solid 1px black;
+    text-align: center;
+}
+
+#searchresults,
+.trending,
+.toprated{
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+#searchresults .searchresultstext,
+#topratedtext,
+#trendingtext{
+    padding: 10px;
+    margin: 10px;
+}
+
+#searchresults img, 
+.toprated img, 
+.trending img{
+    display: inline-block;
+    padding: 15px;
+    height: 500px;
+    margin-bottom: 20px;
+}
+
+#searchresults img:hover,
+.toprated img:hover,
+.trending img:hover{
+    border: 2px;
+    /*background-color: #2b2d2f;*/
+    background-color: rgb(169,169,169, 0.5);
+}
