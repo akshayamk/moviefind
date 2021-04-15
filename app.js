@@ -3,9 +3,10 @@ const URL = 'https://api.themoviedb.org/3/';
 const WEBSITE_URL = 'https://www.themoviedb.org';
 let topRated = document.querySelector('.toprated');
 let trending = document.querySelector('.trending');
-let genreList = document.querySelector('.genres');
+let movieGenres = document.querySelector('.genres');
 let searchResultsImages = document.querySelector('.searchresults');
 let numberofGenres = 0;
+let genreList = {};
 
 
 const getMovie = async(movieSearch) =>{
@@ -71,12 +72,27 @@ const displaySearchResults = (searchResults, movieSearch) => {
 
         if (element.poster_path != null){
             //let posterurl = getDisplayPoster(element);
-            addInnerHTML += getDisplayPoster(element);
+            
+            addInnerHTML += `<div class="poster">${getDisplayPoster(element)}${getMovieDescription(element)}</div>`;
         }
 
         
     });
     searchResultsImages.innerHTML = addInnerHTML;
+
+
+};
+
+const getMovieDescription = (data) =>{
+    
+    let title = `title: ${data.title}`;
+    let genre = `<br>genre: ${data.genre_ids}`;
+    let popularity = `<br>popularity: ${data.popularity}`;
+    let overview = `<br>overview: ${data.overview}`;
+
+
+    return '<div id= "description"><p class="text">title + genre + popularity + overview</p></div>';
+
 
 
 };
@@ -256,7 +272,9 @@ getGenres()
             addInnerHTML += `<label for="${count}">${element.name}</label><br>`
             count += 1;
 
-            genreList.innerHTML += addInnerHTML;
+            movieGenres.innerHTML += addInnerHTML;
+            genreList[element.id] = element.name
+            
 
         });
     })

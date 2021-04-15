@@ -28,21 +28,71 @@
 #trendingtext{
     padding: 10px;
     margin: 10px;
+    text-align: left;
 }
 
 #searchresults img, 
 .toprated img, 
 .trending img{
-    display: inline-block;
+    display: block;
     padding: 15px;
     height: 500px;
     margin-bottom: 20px;
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;  
+
+    
 }
+
+.poster{
+    position: relative;
+    display: inline-block;
+    /* box-sizing: border-box; */
+} 
+
+ .description {
+    position: absolute;
+    transition: .5s ease;
+    opacity: 0;
+    display: block;
+   
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%); */
+    
+}
+
+.poster .text{
+    visibility: hidden;
+}
+
 
 #searchresults img:hover,
 .toprated img:hover,
 .trending img:hover{
+    opacity: 0.3;
     border: 2px;
     /*background-color: #2b2d2f;*/
     background-color: rgb(169,169,169, 0.5);
 }
+
+
+
+.poster:hover img{
+    opacity: 0.3;
+}
+
+
+.poster:hover .text{
+    opacity: 1;
+    visibility: visible; 
+    color: red;
+    font-size: 15px;
+    position: absolute;
+    margin: -400px;
+    margin-left: -300px;
+    
+}
+
